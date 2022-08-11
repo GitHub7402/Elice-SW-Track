@@ -5,11 +5,85 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="main.css" />
-    <title>서비스 이름</title>
+    <title>수강 후기 게시판 (1조)</title>
   </head>
 
   <body>
-    <h1>여기는 익명으로 글 쓰는 페이지입니다.</h1>
-    <h2>안녕하세요</h2>
+    <header>
+      <div class="box">
+        <div class="container">
+          <h1>엘리스 SW 엔지니어 트랙<br />수강 후기 게시판</h1>
+        </div>
+        <div class="container">
+          <img src="imgs/elice@2x.png" alt="엘리스 토끼 이미지" />
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="table">
+        <article class="title grid">
+          <h2>번호</h2>
+          <h2>제목</h2>
+          <h2>만족도</h2>
+          <h2>날짜</h2>
+        </article>
+        <article class="content grid">
+          <h3>1</h3>
+          <h3 class="content-paragraph">
+            엘리스 SW엔지니어 트랙을 수강하면서 프로그래밍의 핵심적인 내용을
+            배울 수 있어서 좋았습니다.
+          </h3>
+          <h3 class="like">⭐⭐⭐⭐⭐</h3>
+          <h3>2022.08.05</h3>
+        </article>
+        <article class="content grid">
+          <h3>2</h3>
+          <h3 class="content-paragraph">
+            코어 교육 시간에 멘토님과 실시간 상호작용할 수 있다는 점에서 온라인
+            교육의 한계를 느끼지 않아 좋았습니다.
+          </h3>
+          <h3 class="like">⭐⭐⭐</h3>
+          <h3>2022.08.04</h3>
+        </article>
+        <article class="content grid">
+          <h3>3</h3>
+          <h3 class="content-paragraph">
+            코딩은 처음이었지만 이론뿐만 아니라 팀 프로젝트 경험도 쌓을 수
+            있어서 유익했습니다.
+          </h3>
+          <h3 class="like">⭐⭐⭐⭐</h3>
+          <h3>2022.08.03</h3>
+        </article>
+      </div>
+
+      <div class="controller">
+        <div class="controller__top">
+          <div></div>
+          <div class="pagination">
+            <h4>⏪</h4>
+            <h4 class="current-page">1</h4>
+            <h4 class="page">2</h4>
+            <h4 class="page">3</h4>
+            <h4 class="page">4</h4>
+            <h4 class="page">5</h4>
+            <h4>⏩</h4>
+          </div>
+          <div class="write">
+            <a href="write.html">글쓰기</a>
+            <h4>목록</h4>
+          </div>
+        </div>
+        <div class="controller__bottom">
+          <div class="search"></div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="background">
+        <img src="imgs/elice@2x.png" alt="엘리스 로고" />
+      </div>
+    </footer>
   </body>
 </html>

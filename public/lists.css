@@ -1,0 +1,104 @@
+.table {
+    height:50vh;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: #ac84dc5e;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 12fr 2fr 2.5fr;
+    gap: 2px;
+}
+
+.grid h2, h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    background-color: #ffffff;
+}
+
+.title h2 {
+    background-color: #6700e6;
+    color: #ffffff;
+    padding: 10px 0;
+
+}
+
+.content {
+    line-height: 1.2;
+    padding: 3px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.like {
+    font-size: 13px;
+    color: white;
+}
+
+.content-paragraph {
+    justify-self: flex-start;
+}
+
+.controller {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.controller__top {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.pagination {
+    display: flex;
+    padding-top: 10px;
+    gap: 5px;
+}
+
+.pagination h4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.page {
+    color: rgba(0, 0, 0, 0.3)
+}
+
+.page:hover {
+    color: black;
+}
+
+.write {
+    position: absolute;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.write h4, .write a {
+    padding: 5px 10px;
+    background-color: #6700e6;
+    color: #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}   
+
+.write h4:active,
+.write a:active {
+    transform: scale(0.98);
+}

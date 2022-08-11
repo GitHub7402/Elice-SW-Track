@@ -1,18 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="main.css" />
+    <title>글 작성 ― 수강 후기 게시판</title>
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="main.css">
-    <title>서비스 이름</title>
-</head>
+  <body>
+    <header>
+      <div class="box">
+        <div class="container">
+          <h1>엘리스 SW 엔지니어 트랙<br />수강 후기 게시판</h1>
+        </div>
+        <div class="container">
+          <img src="imgs/elice@2x.png" alt="엘리스 토끼 이미지" />
+        </div>
+      </div>
+    </header>
 
-<body>
-    <h1>
-        글 작성 페이지
-    </h1>
-</body>
+    <main>
+      <h2 class="write__title">글쓰기</h2>
+      <form action="index.html">
+        <div class="write__like">
+          <h2>만족도</h2>
+          <div class="button">
+            <input type="radio" checked name="like" id="like5" />
+            <label for="like5">⭐⭐⭐⭐⭐</label>
+            <input type="radio" name="like" id="like4" />
+            <label for="like4">⭐⭐⭐⭐</label>
+            <input type="radio" name="like" id="like3" />
+            <label for="like3">⭐⭐⭐</label>
+            <input type="radio" name="like" id="like2" />
+            <label for="like2">⭐⭐</label>
+            <input type="radio" name="like" id="like1" />
+            <label for="like1">⭐</label>
+          </div>
+        </div>
+        <div class="write__content">
+          <h2>제목</h2>
+          <input required type="text" />
+        </div>
+        <div class="write__date">
+          <h2>날짜</h2>
+          <input required type="date" />
+        </div>
+        <div class="write__buttons">
+          <input type="submit" value="글쓰기" />
+          <a href="index.html">목록</a>
+        </div>
+      </form>
+    </main>
 
+    <footer>
+      <div class="background">
+        <img src="imgs/elice@2x.png" alt="엘리스 로고" />
+      </div>
+    </footer>
+  </body>
 </html>

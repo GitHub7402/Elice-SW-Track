@@ -1,0 +1,45 @@
+.write__title {
+    margin: 30px 0;
+    font-size: 18px;
+}
+
+.write__like {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.write__content {
+    margin-bottom: 20px;
+}
+
+.write__content input {
+    width: 100%;
+    font-size: 15px;
+    font-family: "Elice Digital Baeum", sans-serif;;
+
+}
+
+.write__date {
+    margin-bottom: 40px;
+}
+
+.write__content h2,
+.write__date h2 {
+    margin-bottom: 5px;
+}
+
+.write__buttons a, .write__buttons input {
+    font-size: 15px;
+    padding: 5px 10px;
+    background-color: #6700e6;
+    color: #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.write__buttons input {
+    border: none;
+    font-family: "Elice Digital Baeum", sans-serif;;
+}
+
