@@ -10,7 +10,7 @@ const PostSchema = new Schema({
     type: String,
     required: true,
   },
-  author: {
+  like: {
     type: String,
     default: '작성자',
   }
