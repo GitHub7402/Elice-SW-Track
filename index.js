@@ -1,14 +1,15 @@
 const express = require("express");
 const mainRouter = require('./routes');
-const listsRouter = require('./routes/lists');
+const listsRouter = require('./routes/index');
 const writeRouter = require('./routes/write');
-
+const mysqlRouter = require('./models/scheme.js');
 const app = express();
 
 
 app.use("/lists", listsRouter);
 app.use("/write", writeRouter);
 app.use("/", mainRouter);
+app.use("/mysql", mysqlRouter);
 
 app.use((req, res, next) => {
     res.status(404);
