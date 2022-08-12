@@ -1,5 +1,5 @@
 const { Router } = require('express');
-const { Post } = require('../models');
+const { Post } = require('./index.html');
 const asyncHandler = require('../utils/async-handler');
 
 const router = Router();
