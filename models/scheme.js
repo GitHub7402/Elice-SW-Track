@@ -1,22 +1,22 @@
-var express = require('express');
-var router = express.Router();
-var mysql = require('mysql'); 
-router.get('/', function(req, res, next) {     
-  var connection = mysql.createConnection({        
-    host    :'localhost',        
-    port : 3306,        
-    user : 'root',        
-    password : 'elice1234@',        
-    database:'elice'    
-  });     
-  connection.connect(function(err) {       
-    if (err) {            
-      res.render('mysql', { connect: '연결 실패',err:err });            
-      console.error(err);            
-      throw err;        
-    }else{            
-      res.render('mysql', { connect: '연결 성공',err:'없음' });        
-    }    
-  });    
-  connection.end();});
+const { Schema } = require('mongoose');
+const shortId=require('./types/short-id');
+const PostSchema = new Schema({
+  shortId,
+  title: {
+    type: String,
+    required: true,
+  },
+  content: {
+    type: String,
+    required: true,
+  },
+  author: {
+    type: String,
+    default: '작성자',
+  }
+}, {
+  timestamps: true,
+});
+
+module.exports = PostSchema;
 
