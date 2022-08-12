@@ -1,17 +1,22 @@
-// import mongoose from "mongoose";
-const mongoose = require("mongoose")
+var express = require('express');
+var router = express.Router();
+var mysql = require('mysql'); 
+router.get('/', function(req, res, next) {     
+  var connection = mysql.createConnection({        
+    host    :'localhost',        
+    port : 3306,        
+    user : 'root',        
+    password : 'elice1234@',        
+    database:'elice'    
+  });     
+  connection.connect(function(err) {       
+    if (err) {            
+      res.render('mysql', { connect: '연결 실패',err:err });            
+      console.error(err);            
+      throw err;        
+    }else{            
+      res.render('mysql', { connect: '연결 성공',err:'없음' });        
+    }    
+  });    
+  connection.end();});
 
-const connectDB = async () => {
-  try {
-    const conn = await mongoose.connect(process.env.MONGODB_URI, {
-      useUnifiedTopology: true,
-      useNewUrlParser: true,
-      autoIndex: true,
-    });
-    console.log(`MongoDB Connected: ${conn.connection.host}`.cyan.underline);
-  } catch (error) {
-    console.error(`Error: ${error.message}`.red.underline.bold);
-    process.exit(1);
-  }
-};
-module.exports = connectDB;
