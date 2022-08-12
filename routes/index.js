@@ -1,16 +1,4 @@
 const { Router } = require('express');
-const router = Router();
-const path = require('path');
-
-router.get("/", (req, res) => {
-    res.sendFile('index.html', { root: path.join(__dirname, '../public') });
-});
-
-module.exports = router;
-
-///////////
-
-const { Router } = require('express');
 const { Post } = require('../models');
 const asyncHandler = require('../utils/async-handler');
 
@@ -53,7 +41,7 @@ router.post('/', asyncHandler(async (req, res) => {
     throw new Error('제목과 내용을 입력 해 주세요');
   }
 
-  const post = await Post.create({ title, content });
+  const post = await Post.create({ write_content, write_like });
   res.redirect(`/posts/${post.shortId}`);
 }));
 
@@ -65,7 +53,7 @@ router.post('/:shortId', asyncHandler(async (req, res) => {
     throw new Error('제목과 내용을 입력 해 주세요');
   }
     
-  await Post.updateOne({ shortId }, {title, content });
+  await Post.updateOne({ shortId }, {write_content, write_like });
   res.redirect(`/posts/${shortId}`);
 }));
 
